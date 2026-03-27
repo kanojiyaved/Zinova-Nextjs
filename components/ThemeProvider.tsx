@@ -11,15 +11,16 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [theme, setTheme] = useState<Theme>("light");
+  const [theme, setTheme] = useState<Theme>(() => {
+    // Check for saved theme or default to light
+    if (typeof window !== "undefined") {
+      const savedTheme = localStorage.getItem("theme") as Theme | null;
+      return savedTheme || "light";
+    }
+    return "light";
+  });
 
   useEffect(() => {
-    // Check for saved theme or default to light
-    const savedTheme = localStorage.getItem("theme") as Theme | null;
-    if (savedTheme) {
-      setTheme(savedTheme);
-    }
-    
     // Add class to body for Tailwind dark mode
     if (theme === "dark") {
       document.documentElement.classList.add("dark");

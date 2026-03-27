@@ -54,7 +54,7 @@ function flushQueue(): void {
 
 	const events = eventQueue.splice(0, eventQueue.length);
 
-	if (import.meta.env.DEV) {
+	if (process.env.NODE_ENV === 'development') {
 		events.forEach((event) => {
 			console.log("[AUDIT]", event);
 		});

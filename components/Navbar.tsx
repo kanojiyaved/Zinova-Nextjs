@@ -4,7 +4,6 @@ import { useRouter } from "next/navigation";
 import { NAVIGATION_ITEMS } from "@/lib/config";
 import ThemeToggle from "@/components/ThemeToggle";
 import MobileMenu from "@/components/MobileMenu";
-import logo from "/Zinova_logo.png";
 import { logUserAction, logError } from "@/lib/logger";
 
 
@@ -46,7 +45,7 @@ const Navbar = () => {
         {/* Logo */}
         <div className="flex items-center gap-4 cursor-pointer" onClick={() => router.push("/")}>
           <img 
-            src={logo.src} 
+            src="/Zinova_logo.png" 
             alt="Zinova" 
             className="h-12 w-12 object-contain"
           />
