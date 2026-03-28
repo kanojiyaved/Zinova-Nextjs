@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import { useState } from "react";
 import { Leaf, Zap, Heart, Users } from "lucide-react";
 import AnimatedButton from "@/components/ui/animated-button";
@@ -91,10 +91,10 @@ const CallToAction = () => {
         <div className="grid items-center gap-12 lg:grid-cols-2">
           {/* Left Column - Benefits */}
           <div>
-            <h2 className="mb-6 text-3xl font-bold md:text-4xl">
+            <h2 className="mb-6 text-2xl font-bold md:text-3xl lg:text-4xl">
               Transform Waste Into Worth
             </h2>
-            <p className="mb-8 max-w-xl text-base leading-relaxed text-primary-foreground/90 md:text-lg">
+            <p className="mb-8 max-w-xl text-sm leading-relaxed text-primary-foreground/90 md:text-base lg:text-lg">
               Join the growing community of restaurants, farms, and NGOs making a real impact on food waste and hunger.
             </p>
             
@@ -146,10 +146,10 @@ const CallToAction = () => {
           {/* Right Column - Email Signup */}
           <div className="rounded-2xl border border-primary-foreground/20 bg-card/10 p-8 backdrop-blur-sm dark:border-[var(--border-color)] dark:bg-[var(--card-bg)]/70">
             <div className="text-center mb-6">
-              <h3 className="text-2xl font-bold text-primary-foreground mb-2">
+              <h3 className="text-xl font-bold text-primary-foreground mb-2 md:text-2xl">
                 Ready to Get Started?
               </h3>
-              <p className="text-primary-foreground/80">
+              <p className="text-sm text-primary-foreground/80 md:text-base">
                 Join thousands of organizations fighting food waste
               </p>
             </div>

@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { FEATURES } from "@/lib/config";
 import { 
@@ -29,11 +29,11 @@ const Features = () => {
     <section className="bg-background px-4 py-20 sm:px-6 lg:py-24">
       <div className="mx-auto max-w-6xl space-y-12">
         <div className="text-center space-y-4">
-          <h2 className="text-3xl font-bold text-foreground md:text-4xl">
+          <h2 className="text-2xl font-bold text-foreground md:text-3xl lg:text-4xl">
             Powered by Innovation
           </h2>
           <div className="w-20 h-1 bg-accent mx-auto rounded-full" />
-          <p className="mx-auto max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
+          <p className="mx-auto max-w-2xl text-sm leading-relaxed text-muted-foreground md:text-base lg:text-lg">
             Advanced technology working together to create sustainable impact.
           </p>
         </div>
@@ -50,7 +50,7 @@ const Features = () => {
                   <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-accent/10 transition-colors">
                     {IconComponent && <IconComponent className="h-6 w-6 text-primary group-hover:text-accent transition-colors" />}
                   </div>
-                  <CardTitle className="text-xl text-foreground">{feature.title}</CardTitle>
+                  <CardTitle className="text-lg md:text-xl text-foreground">{feature.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="text-sm leading-relaxed text-muted-foreground">

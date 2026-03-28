@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import { useState, useEffect } from "react";
 import { Leaf, Users, Heart, Package, TrendingUp } from "lucide-react";
 import AnimatedCounter from "@/components/AnimatedCounter";
@@ -96,19 +96,19 @@ const ImpactCalculator = () => {
     <section id="impact-calculator" className="bg-gradient-to-br from-primary/10 to-accent/10 px-4 py-20 sm:px-6 lg:py-24">
       <div className="mx-auto max-w-6xl">
         <div className="mb-16 space-y-4 text-center">
-          <h2 className="text-3xl font-bold text-foreground md:text-4xl">
+          <h2 className="text-2xl font-bold text-foreground md:text-3xl lg:text-4xl">
             Calculate Your Impact
           </h2>
           <div className="w-20 h-1 bg-accent mx-auto rounded-full" />
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto">
             See how much difference you can make by reducing food waste with Zinova
           </p>
         </div>
 
         <div className="grid gap-8 lg:grid-cols-3">
           {/* Calculator Controls */}
-          <div className="rounded-2xl border border-border bg-card p-6 shadow-sm dark:border-[var(--border-color)] dark:bg-[var(--card-bg)] lg:col-span-1">
-            <h3 className="mb-6 text-xl font-bold text-foreground">Your Food Waste</h3>
+          <div className="flex flex-col h-full rounded-2xl border border-border bg-card p-6 shadow-sm dark:border-[var(--border-color)] dark:bg-[var(--card-bg)] lg:col-span-1">
+            <h3 className="mb-6 text-lg md:text-xl font-bold text-foreground">Your Food Waste</h3>
             
             <div className="space-y-6">
               <div>
@@ -128,7 +128,7 @@ const ImpactCalculator = () => {
                     }}
                     className="w-full h-2 bg-primary/20 rounded-lg appearance-none cursor-pointer"
                   />
-                  <span className="text-lg font-bold text-primary min-w-[60px]">
+                  <span className="text-base md:text-lg font-bold text-primary min-w-[80px] whitespace-nowrap">
                     {foodWaste} kg
                   </span>
                 </div>
@@ -155,7 +155,7 @@ const ImpactCalculator = () => {
                     }}
                     className="w-full h-2 bg-primary/20 rounded-lg appearance-none cursor-pointer"
                   />
-                  <span className="text-lg font-bold text-primary min-w-[60px]">
+                  <span className="text-base md:text-lg font-bold text-primary min-w-[80px] whitespace-nowrap">
                     {timePeriod} mo
                   </span>
                 </div>
@@ -181,14 +181,14 @@ const ImpactCalculator = () => {
           </div>
           
           {/* Impact Results */}
-          <div className="lg:col-span-2">
-            <div className="grid gap-6 sm:grid-cols-2">
+          <div className="lg:col-span-2 flex flex-col h-full">
+            <div className="grid gap-6 sm:grid-cols-2 h-full">
               {impactItems.map((item, index) => {
                 const Icon = item.icon;
                 return (
                   <div 
                     key={index} 
-                    className="rounded-2xl border border-border bg-card p-6 shadow-sm transition-shadow duration-300 hover:shadow-md dark:border-[var(--border-color)] dark:bg-[var(--card-bg)]"
+                    className="flex flex-col h-full rounded-2xl border border-border bg-card p-6 shadow-sm transition-shadow duration-300 hover:shadow-md dark:border-[var(--border-color)] dark:bg-[var(--card-bg)]"
                   >
                     <div className="flex items-start mb-4">
                       <div className={`mr-4 rounded-lg p-3 ${item.color}/10 dark:bg-[var(--bg-secondary)]`}>
@@ -201,6 +201,7 @@ const ImpactCalculator = () => {
                             target={item.value} 
                             suffix={item.suffix} 
                             duration={1500} 
+                            className="text-lg md:text-xl lg:text-2xl"
                           />
                         </div>
                       </div>
@@ -212,35 +213,36 @@ const ImpactCalculator = () => {
                 );
               })}
             </div>
-            
-            <div className="mt-8 rounded-2xl bg-gradient-to-r from-green-500 to-emerald-600 p-6 text-white shadow-sm dark:from-[var(--bg-secondary)] dark:to-[var(--bg-primary)] dark:text-[var(--text-primary)]">
-              <div className="flex flex-col items-center gap-4 md:flex-row md:items-center md:gap-6">
-                <div className="flex items-center">
-                  <Heart className="h-8 w-8 mr-3" />
-                  <div>
-                    <h3 className="text-xl font-bold">Ready to Make a Difference?</h3>
-                    <p className="mt-1 opacity-90">
-                      Join thousands of organizations using Zinova to fight food waste
-                    </p>
-                  </div>
+          </div>
+          
+          {/* CTA Banner - Full Width */}
+          <div className="mt-8 rounded-2xl bg-gradient-to-r from-green-500 to-emerald-600 p-6 text-white shadow-sm dark:from-[var(--bg-secondary)] dark:to-[var(--bg-primary)] dark:text-[var(--text-primary)] lg:col-span-3">
+            <div className="flex flex-col items-center gap-4 md:flex-row md:items-center md:gap-6">
+              <div className="flex items-center">
+                <Heart className="h-8 w-8 mr-3" />
+                <div>
+                  <h3 className="text-xl font-bold">Ready to Make a Difference?</h3>
+                  <p className="mt-1 opacity-90 text-sm md:text-base">
+                    Join thousands of organizations using Zinova to fight food waste
+                  </p>
                 </div>
-                <button
-                  onClick={() => {
-                    try {
-                      logUserAction(
-                        "CTA_CLICK",
-                        { label: "Get Started Today" },
-                        "ImpactCalculator"
-                      );
-                    } catch {
-                      // Logging should never block CTA behavior.
-                    }
-                  }}
-                  className="whitespace-nowrap rounded-lg bg-white px-6 py-3 font-semibold text-green-700 transition-colors hover:bg-gray-100 dark:border dark:border-[var(--border-color)] dark:bg-[var(--card-bg)] dark:text-[var(--text-primary)] dark:hover:bg-[var(--bg-secondary)] md:ml-auto"
-                >
-                  Get Started Today
-                </button>
               </div>
+              <button
+                onClick={() => {
+                  try {
+                    logUserAction(
+                      "CTA_CLICK",
+                      { label: "Get Started Today" },
+                      "ImpactCalculator"
+                    );
+                  } catch {
+                    // Logging should never block CTA behavior.
+                  }
+                }}
+                className="whitespace-nowrap rounded-lg bg-white px-6 py-3 font-semibold text-green-700 transition-colors hover:bg-gray-100 dark:border dark:border-[var(--border-color)] dark:bg-[var(--card-bg)] dark:text-[var(--text-primary)] dark:hover:bg-[var(--bg-secondary)] md:ml-auto"
+              >
+                Get Started Today
+              </button>
             </div>
           </div>
         </div>

@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import { Leaf, Sprout, Apple, ArrowRight } from "lucide-react";
 import AnimatedButton from "@/components/ui/animated-button";
 import { logUserAction } from "@/lib/logger";
@@ -24,18 +24,18 @@ const Hero = () => {
       <div className="relative z-10 mx-auto max-w-4xl animate-fade-in space-y-8 text-center">
         
         <div className="flex items-center justify-center gap-4">
-          <Leaf className="h-8 w-8 text-green-500" />
-          <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-7xl">
+          <Leaf className="h-6 w-6 sm:h-8 sm:w-8 text-green-500" />
+          <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-5xl md:text-7xl">
             Zinova
           </h1>
-          <Sprout className="h-8 w-8 text-green-500" />
+          <Sprout className="h-6 w-6 sm:h-8 sm:w-8 text-green-500" />
         </div>
         
-        <p className="mx-auto max-w-2xl text-lg leading-relaxed text-muted-foreground sm:text-xl md:text-2xl">
+        <p className="mx-auto max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg md:text-xl lg:text-2xl">
           Empowering sustainability through technology.
         </p>
         
-        <p className="mx-auto max-w-3xl text-base leading-relaxed text-muted-foreground md:text-lg">
+        <p className="mx-auto max-w-3xl text-sm leading-relaxed text-muted-foreground sm:text-base md:text-lg">
           Connecting farmers, restaurants, and NGOs to fight food waste and hunger with AI-powered solutions.
         </p>
         

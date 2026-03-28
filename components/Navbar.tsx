@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { NAVIGATION_ITEMS } from "@/lib/config";
@@ -43,13 +43,13 @@ const Navbar = () => {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6">
         
         {/* Logo */}
-        <div className="flex items-center gap-4 cursor-pointer" onClick={() => router.push("/")}>
+        <div className="flex items-center gap-2 md:gap-4 cursor-pointer" onClick={() => router.push("/")}>
           <img 
             src="/Zinova_logo.png" 
             alt="Zinova" 
-            className="h-12 w-12 object-contain"
+            className="h-8 w-8 md:h-12 md:w-12 object-contain"
           />
-          <span className="text-xl font-bold tracking-tight text-foreground">Zinova</span>
+          <span className="text-lg md:text-xl font-bold tracking-tight text-foreground">Zinova</span>
         </div>
 
         {/* Desktop Navigation */}

@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -73,11 +73,11 @@ const Contact = () => {
     <section id="contact" className="bg-card px-4 py-20 sm:px-6 lg:py-24">
       <div className="mx-auto max-w-2xl space-y-8">
         <div className="text-center space-y-4">
-          <h2 className="text-3xl font-bold text-foreground md:text-4xl">
+          <h2 className="text-2xl font-bold text-foreground md:text-3xl lg:text-4xl">
             Join the Movement
           </h2>
           <div className="w-20 h-1 bg-accent mx-auto rounded-full" />
-          <p className="text-base leading-relaxed text-muted-foreground">
+          <p className="text-sm md:text-base leading-relaxed text-muted-foreground">
             Whether you're a farmer, restaurant, NGO, or just want to help, let's connect.
           </p>
         </div>

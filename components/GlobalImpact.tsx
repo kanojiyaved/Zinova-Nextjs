@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import { useState, useEffect } from "react";
 import { Globe, TrendingUp, Users, Leaf } from "lucide-react";
 import AnimatedCounter from "@/components/AnimatedCounter";
@@ -24,16 +24,16 @@ const GlobalImpact = () => {
     },
     {
       icon: TrendingUp,
-      title: "COâ‚‚ Emissions",
+      title: "CO₂ Emissions",
       value: 3300000000, // 3.3 billion tons
-      unit: " tons COâ‚‚e",
+      unit: " tons CO₂e",
       description: "from food waste"
     },
     {
       icon: Globe,
       title: "Water Wasted",
       value: 250000000000, // 250 billion cubic meters
-      unit: " mÂ³",
+      unit: " m³",
       description: "used in food production"
     }
   ];
@@ -67,7 +67,7 @@ const GlobalImpact = () => {
     <section className="bg-gradient-to-br from-background to-secondary px-4 py-16 sm:px-6 lg:py-20">
       <div className="mx-auto max-w-6xl">
         <div className="mb-12 space-y-4 text-center">
-          <h2 className="text-3xl font-bold text-foreground md:text-4xl">
+          <h2 className="text-2xl font-bold text-foreground md:text-3xl lg:text-4xl">
             The Global Challenge
           </h2>
           <div className="w-20 h-1 bg-accent mx-auto rounded-full" />
@@ -83,7 +83,7 @@ const GlobalImpact = () => {
               <div 
                 key={index} 
                 className={`
-                  rounded-2xl border border-border bg-card p-4 shadow-sm dark:border-[var(--border-color)] dark:bg-[var(--card-bg)]
+                  flex flex-col h-full rounded-2xl border border-border bg-card p-4 shadow-sm dark:border-[var(--border-color)] dark:bg-[var(--card-bg)]
                   transition-all duration-700 ease-out
                   ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}
                 `}
@@ -102,7 +102,7 @@ const GlobalImpact = () => {
                     suffix={stat.unit}
                     duration={2000}
                     formatValue={formatShortScale}
-                    className="text-2xl font-bold text-primary md:text-3xl"
+                    className="text-xl font-bold text-primary md:text-2xl lg:text-3xl"
                   />
                 </div>
                 

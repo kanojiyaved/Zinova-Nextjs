@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import { VALUE_PROPOSITIONS } from "@/lib/config";
 import { Leaf, Zap, Shield, Heart } from "lucide-react";
 
@@ -15,11 +15,11 @@ const ValueProposition = () => {
     <section className="bg-gradient-to-br from-primary/5 to-accent/5 px-4 py-20 sm:px-6 lg:py-24">
       <div className="mx-auto max-w-6xl">
         <div className="mb-16 space-y-4 text-center">
-          <h2 className="text-3xl font-bold text-foreground md:text-4xl">
+          <h2 className="text-2xl font-bold text-foreground md:text-3xl lg:text-4xl">
             Why Choose Zinova?
           </h2>
           <div className="w-20 h-1 bg-accent mx-auto rounded-full" />
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto">
             Our unique approach combines technology, sustainability, and community impact
           </p>
         </div>
@@ -35,7 +35,7 @@ const ValueProposition = () => {
                 <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
                   {IconComponent && <IconComponent className="h-8 w-8 text-primary" />}
                 </div>
-                <h3 className="mb-3 text-xl font-bold text-foreground">{value.title}</h3>
+                <h3 className="mb-3 text-lg md:text-xl font-bold text-foreground">{value.title}</h3>
                 <p className="text-sm leading-relaxed text-muted-foreground">{value.description}</p>
               </div>
             );
