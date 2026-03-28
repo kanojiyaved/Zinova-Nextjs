@@ -5,7 +5,7 @@ import { FormCard } from "@/components/forms/FormCard";
 import { FormInput } from "@/components/forms/FormInput";
 import { SubmitButton } from "@/components/forms/SubmitButton";
 
-const API = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
+const API = process.env.NEXT_PUBLIC_API_URL || "";
 
 type Step = "details" | "otp" | "done";
 
